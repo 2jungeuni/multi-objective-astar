@@ -70,7 +70,26 @@ python3 main.py -f ${start_node_id} -t ${end_node_id} -w 0 0 1 -s ${save_or_not}
 ```
 
 ### Example
-
+```python3
+python3 main.py -f 47 -t 52 -w 1 0 0 -s 1
+```
+#### Result
+```
+save in ./result/optimal_path.csv
+   longitude  latitude  distance (m)  time (sec)
+0   -73.9398   40.6608         0.000     0.00000
+1   -73.9426   40.6606       236.813    21.18940
+2   -73.9454   40.6604       237.132    21.21800
+3   -73.9461   40.6604        57.119     5.11086
+4   -73.9466   40.6604        47.135     4.21752
+5   -73.9473   40.6603        51.677     4.62393
+Total distance (m):  629.876
+Total travel time (m):  56.35971
+```
+#### Visualization
+```python3
+python3 visualization.py
+```
 
 ### References
 [1] Donovan, Brian; Work, Dan (2016): New York City Taxi Trip Data (2010-2013). University of Illinois at Urbana-Champaign. https://doi.org/10.13012/J8PN93H8  

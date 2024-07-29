@@ -1,5 +1,6 @@
 import pickle
 import argparse
+import pandas as pd
 from planner import *
 
 if __name__ == "__main__":
@@ -22,5 +23,9 @@ if __name__ == "__main__":
     if save:
         planner.astar_path(frm, to)
         print("save in ./result/optimal_path.csv")
+        table = pd.read_csv("./result/optimal_path.csv")
+        print(table)
+        print("Total distance (m): ", sum(table['distance (m)']))
+        print("Total travel time (m): ", sum(table['time (sec)']))
     else:
         print(planner.astar(frm, to))
